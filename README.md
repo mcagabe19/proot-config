@@ -5,7 +5,7 @@ pulseaudio proot-distro virglrenderer-android
 
 Packages (PRoot)
 ```bash
-xfce4 pulseaudio pavucontrol tumbler thunar-volman gvfs mesa-utils
+xfce4 pulseaudio pavucontrol tumbler thunar-volman gvfs mesa-utils x11-utils alsa-utils
 ```
 
 debian
@@ -43,7 +43,8 @@ exit 0
 bash.bashrc
 ```bash
 ...
-
+export TERMUX_HOME=/data/data/com.termux/files/home
+export TERMUX_PREFIX=/data/data/com.termux/files/usr
 # export GALLIUM_DRIVER=virpipe
 export MESA_NO_ERROR=1
 export MESA_GL_VERSION_OVERRIDE=4.5COMPAT
@@ -52,4 +53,7 @@ export MESA_EXTENSION_OVERRIDE=GL_EXT_texture_compression_s3tc
 export PAN_MESA_DEBUG=gofaster,gl3
 export mesa_glthread=true
 export __GL_THREADED_OPTIMIZATIONS=1
+export BOX64_LOG=1
+export BOX64_DYNAREC_BIGBLOCK=2
+export BOX64_DYNAREC_CALLRET=1
 ```
